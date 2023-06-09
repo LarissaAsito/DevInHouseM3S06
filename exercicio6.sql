@@ -1,0 +1,8 @@
+BEGIN
+    FOR I IN 1..3 LOOP
+        UPDATE PRODUTO_PRECO 
+        SET VALOR = VALOR + (VALOR * 0.15)
+        WHERE VALOR > 100;
+    END LOOP;
+    COMMIT;
+END;
